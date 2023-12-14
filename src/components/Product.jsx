@@ -10,16 +10,12 @@ function Product({ cart, setCart }) {
 
   function addToCart() {
     if (cart.find((x) => x.id === id)) {
-      const index = cart.findIndex(elem => elem.id === id);
-      const updatedOrder = {...cart[index], quantity:cart[index].quantity +  quantity};
-      const newCart = [
-        ...cart.slice(0, index),
-        updatedOrder,
-        ...cart.slice(index + 1)
-      ];
+      const index = cart.findIndex((elem) => elem.id === id);
+      const updatedOrder = { ...cart[index], quantity: cart[index].quantity + quantity };
+      const newCart = [...cart.slice(0, index), updatedOrder, ...cart.slice(index + 1)];
       setCart(newCart);
-    }else{
-        setCart((prev) => [...prev, { id: id, quantity: quantity }]);
+    } else {
+      setCart((prev) => [...prev, { id: id, quantity: quantity }]);
     }
   }
 
@@ -56,7 +52,7 @@ function Product({ cart, setCart }) {
             value={quantity}
             readOnly
           />
-          <div 
+          <div
             className='border-black border-[2px] rounded-md w-6 text-center font-medium hover:bg-black hover:text-white cursor-pointer'
             onClick={() => setQuantity((prev) => prev + 1)}
           >

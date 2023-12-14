@@ -2,18 +2,18 @@ function Footer() {
   return (
     <div className='text-white bg-black p-5 font-extralight cursor-default mt-auto'>
       <div className='flex gap-10 flex-wrap justify-center'>
-        <div className="max-w-md">
+        <div className='max-w-md'>
           <h1 className='mb-5 text-xl'>
             <b>SHOPPING CART</b>
           </h1>
-          <p className="text-sm">
+          <p className='text-sm'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis magni ut sit, veniam
             magnam nesciunt corporis neque aliquam earum facere repudiandae itaque exercitationem
             accusamus provident nemo quasi! Modi, amet iste.
           </p>
         </div>
         <div className='flex gap-10'>
-          <ul className="text-sm">
+          <ul className='text-sm'>
             <li className='text-xl mb-5'>
               <b>SHOP</b>
             </li>
@@ -23,7 +23,7 @@ function Footer() {
             <li className='hover:underline'>Men</li>
             <li className='hover:underline'>Women</li>
           </ul>
-          <ul className="text-sm">
+          <ul className='text-sm'>
             <li className='text-xl mb-5'>
               <b>USEFUL LINKS</b>
             </li>
@@ -32,15 +32,15 @@ function Footer() {
             <li className='hover:underline'>Cart</li>
             <li className='hover:underline'>Repository</li>
           </ul>
-          <ul className="text-sm">
-            <li className="text-xl mb-5">
+          <ul className='text-sm'>
+            <li className='text-xl mb-5'>
               <b>HELP</b>
             </li>
-            <li className="hover:underline">Shipping & Returns</li>
-            <li className="hover:underline">Repairs</li>
-            <li className="hover:underline">Warranty</li>
-            <li className="hover:underline">FAQ</li>
-            <li className="hover:underline">Contact Us</li>
+            <li className='hover:underline'>Shipping & Returns</li>
+            <li className='hover:underline'>Repairs</li>
+            <li className='hover:underline'>Warranty</li>
+            <li className='hover:underline'>FAQ</li>
+            <li className='hover:underline'>Contact Us</li>
           </ul>
         </div>
       </div>

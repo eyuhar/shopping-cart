@@ -18,7 +18,7 @@ function Router() {
         { path: 'home', element: <Home /> },
         { path: 'shop', element: <Shop /> },
         { path: 'shop/product/:id', element: <Product cart={cart} setCart={setCart} /> },
-        { path: 'cart', element: <Cart cart={cart} setCart={setCart}/> },
+        { path: 'cart', element: <Cart cart={cart} setCart={setCart} /> },
       ],
     },
   ]);

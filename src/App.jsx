@@ -1,12 +1,31 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react';
+import Header from './components/Header';
+import { Outlet } from 'react-router-dom';
+import '../index.css';
+import Footer from './components/Footer';
 
-function App() {
+function App({ cart }) {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then((res) => res.json())
+      .then((json) => {
+        setProducts(json);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
   return (
-    <>
-      <p>Hello!</p>
-    </>
-  )
+    <div className='flex flex-col font-light h-screen'>
+      <Header cart={cart} />
+      {!loading && <Outlet context={products} />}
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import App from '../App';
 import Home from './Home';
 import Shop from './Shop';
@@ -9,7 +9,7 @@ import { useState } from 'react';
 function Router() {
   const [cart, setCart] = useState([]);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: '/',
       element: <App cart={cart} />,

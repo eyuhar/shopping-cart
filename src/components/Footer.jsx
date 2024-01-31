@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <div className='text-white bg-black p-5 font-extralight cursor-default mt-auto'>
@@ -27,9 +29,9 @@ function Footer() {
             <li className='text-xl mb-5'>
               <b>USEFUL LINKS</b>
             </li>
-            <li className='hover:underline'>Home</li>
-            <li className='hover:underline'>Shop</li>
-            <li className='hover:underline'>Cart</li>
+            <li className='hover:underline'><Link to={'/'}>Home</Link></li>
+            <li className='hover:underline'><Link to={'shop'}>Shop</Link></li>
+            <li className='hover:underline'><Link to={'cart'}>Cart</Link></li>
             <li className='hover:underline'>Repository</li>
           </ul>
           <ul className='text-sm'>

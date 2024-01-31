@@ -1,4 +1,4 @@
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, Link } from 'react-router-dom';
 
 function Home() {
   const products = useOutletContext();
@@ -9,7 +9,7 @@ function Home() {
         <div className='flex flex-col gap-5 w-full self-center justify-self-center max-w-xs mb-4'>
           <img src={products[11].image} alt='' className='' />
           <button className='border-2 border-slate-600 w-fit p-1 self-center hover:bg-slate-600 hover:text-white'>
-            Buy <b>Now!</b>
+            Buy <Link to={'shop/product/12'}><b>Now!</b></Link>
           </button>
         </div>
         <div className='flex flex-col justify-center mb-4'>

@@ -5,7 +5,9 @@ function Header({ cart }) {
     <>
       <div className='flex sticky top-0 gap-5 al justify-between items-center p-4 bg-white'>
         <h1 className='text-black font-bold text-2xl whitespace-nowrap cursor-default'>
-          Shopping Cart
+          <Link to={'/'}>
+            Shopping Cart
+          </Link>
         </h1>
         <input
           id='search-bar'
@@ -16,7 +18,7 @@ function Header({ cart }) {
         <nav>
           <ul className='flex gap-3 text-white'>
             <li className='text-black hover:underline cursor-default'>
-              <Link to={'home'}>Home</Link>
+              <Link to={'/'}>Home</Link>
             </li>
             <li className='text-black hover:underline cursor-default'>
               <Link to='shop'>Shop</Link>

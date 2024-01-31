@@ -23,9 +23,9 @@ export function starRating(rating) {
 
 function Shop({ cart }) {
   const products = useOutletContext();
-  console.log(products);
+  
   return (
-    <ul className='flex flex-wrap justify-center gap-10 pt-5 ml-auto mr-auto pb-5 xl:max-w-7xl'>
+    <ul className='flex flex-wrap justify-center h-full gap-10 pt-5 ml-auto mr-auto pb-5 xl:max-w-7xl'>
       {products.map((product) => {
         return (
           <li

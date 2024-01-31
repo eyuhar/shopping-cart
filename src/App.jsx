@@ -20,7 +20,7 @@ function App({ cart }) {
   }, []);
 
   return (
-    <div className='flex flex-col font-light h-screen'>
+    <div className='flex flex-col font-light h-full'>
       <Header cart={cart} />
       {!loading && <Outlet context={products} />}
       <Footer />

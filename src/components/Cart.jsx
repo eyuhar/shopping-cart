@@ -24,19 +24,19 @@ function Cart({ cart, setCart }) {
   return cart.length !== 0 ? (
     <div className='flex flex-col items-center p-5'>
       <h2 className='text-black font-medium text-lg pb-10 '>YOUR CART</h2>
-      <table className='table-fixed min-w-[500px] max-w-5xl text-gray-600'>
+      <table className='table-fixed min-w-[360px] max-w-5xl text-gray-600'>
         <thead>
           <tr className=''>
-            <th className='w-1/2 pb-8 font-medium'>ITEM</th>
-            <th className='pb-8 font-medium'>PRICE</th>
-            <th className='pb-8 font-medium'>QUANTITY</th>
-            <th className='pb-8 font-medium'>TOTAL</th>
+            <th className='w-1/2 pb-8  font-medium'>ITEM</th>
+            <th className='pb-8  font-medium'>PRICE</th>
+            <th className='pb-8  font-medium'>QUANTITY</th>
+            <th className='pb-8  font-medium'>TOTAL</th>
           </tr>
         </thead>
         <tbody className='font-normal'>
           {cart.map((product) => (
             <tr key={product.id}>
-              <td className='flex gap-4 items-center pb-5'>
+              <td className='flex gap-4 items-center pb-5 pr-1'>
                 <img
                   src={products[product.id - 1].image}
                   alt={products[product.id - 1].title}
@@ -46,9 +46,9 @@ function Cart({ cart, setCart }) {
                   <p className='hover:underline'>{products[product.id - 1].title}</p>
                 </Link>
               </td>
-              <td className='text-center pb-5'>{products[product.id - 1].price} &#8364;</td>
-              <td className='pb-5'>
-                <div className='flex justify-center self-center gap-1'>
+              <td className='text-center pb-5 pr-1'>{products[product.id - 1].price}&#8364;</td>
+              <td className='pb-5 pr-1'>
+                <div className='flex flex-col sm:flex-row items-center justify-center self-center gap-1'>
                   <div
                     className='border-black border-[1px] rounded-md w-6 text-center font-medium hover:bg-black hover:text-white cursor-pointer'
                     onClick={() => changeQuantity(product.id, 'decrease')}
@@ -73,7 +73,7 @@ function Cart({ cart, setCart }) {
                 </div>
               </td>
               <td className='text-center pb-5'>
-                {product.quantity * products[product.id - 1].price} &#8364;
+                {product.quantity * products[product.id - 1].price}&#8364;
               </td>
             </tr>
           ))}
